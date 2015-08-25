@@ -20,8 +20,14 @@ var app = app || {};
 		// Toggle the `completed` state of this todo item.
 		toggle: function () {
 			this.save({
-				priority: !this.get('priority'),
 				completed: !this.get('completed')
+			});
+		},
+
+		// Toggle the `completed` state of this todo item.
+		togglePriority: function () {
+			this.save({
+				priority: !this.get('priority')
 			});
 		}
 	});
